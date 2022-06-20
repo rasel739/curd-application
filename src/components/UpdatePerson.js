@@ -9,9 +9,10 @@ const UpdatePerson = () => {
 
   const navigate = useNavigate();
 
-  const [id, setId] = useState(location.state.id);
   const [name, setName] = useState(location.state.name);
   const [phone, setPhone] = useState(location.state.phone);
+
+  const id = location.state.id;
 
   console.log(location);
 
@@ -20,7 +21,7 @@ const UpdatePerson = () => {
 
     dispatch(updatePerson({ id, name, phone }));
 
-    navigate("/", { replace: true });
+    navigate("/");
   };
 
   return (

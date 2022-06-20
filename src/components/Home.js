@@ -11,12 +11,10 @@ const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
-  console.log(person);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const persons = { name, phone };
+    const persons = { id: person.length + 1, name, phone };
 
     dispatch(postPerson(persons));
   };
@@ -53,11 +51,14 @@ const Home = () => {
           </form>
         </div>
         <div className="show-data">
-          {person.map((person) => (
-            <div key={person.id}>
-              <PersonData person={person}></PersonData>
-            </div>
-          ))}
+          {person
+            .slice(0)
+            .reverse()
+            .map((person) => (
+              <div key={person.id}>
+                <PersonData person={person}></PersonData>
+              </div>
+            ))}
         </div>
       </div>
     </div>
