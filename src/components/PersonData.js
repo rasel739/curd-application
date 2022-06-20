@@ -1,5 +1,8 @@
+import { BsEyeFill, BsFillTrashFill, BsPencilSquare } from "react-icons/bs";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
+import personDataStyle from "../assets/style/personTable.module.scss";
 import { deletePerson } from "../redux/personSlice";
 
 const PersonData = ({ person }) => {
@@ -8,22 +11,64 @@ const PersonData = ({ person }) => {
   const dispatch = useDispatch();
 
   const handleDelete = (id) => {
-    dispatch(deletePerson(id));
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        dispatch(deletePerson(id));
+        Swal.fire("Deleted!", "Your file has been deleted.", "success");
+      }
+    });
   };
 
   return (
-    <div>
-      <div>
-        <h6>Name: {name}</h6>
-        <h6>Phone Number: {phone}</h6>
+    <div className={personDataStyle.personMain}>
+      <div className={personDataStyle.personItem}>
+        <p>
+          {"#"}
+          {id}
+        </p>
       </div>
-      <div>
-        <button onClick={() => handleDelete(id)}>Delete</button>
+      <div className={personDataStyle.personItem}>
+        <p>{name}</p>
       </div>
-      <div>
-        <button>
-          <Link to="/update-person" state={{ id, name, phone }}>
-            Update
+      <div className={personDataStyle.personItem}>
+        <p> {phone}</p>
+      </div>
+
+      <div className={personDataStyle.personItem}>
+        <button className={personDataStyle.personButton}>
+          <Link
+            to="/update-person"
+            state={{ id, name, phone }}
+            style={{ textDecoration: "none" }}
+          >
+            <BsPencilSquare />
+          </Link>
+        </button>
+      </div>
+      <div className={personDataStyle.personItem}>
+        <button
+          className={personDataStyle.personButton}
+          onClick={() => handleDelete(id)}
+        >
+          <BsFillTrashFill />
+        </button>
+      </div>
+      <div className={personDataStyle.personItem}>
+        <button className={personDataStyle.personButton}>
+          <Link
+            to={`/contact/${id}`}
+            state={{ id, name, phone }}
+            style={{ textDecoration: "none" }}
+          >
+            <BsEyeFill />
           </Link>
         </button>
       </div>

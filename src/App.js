@@ -1,9 +1,9 @@
-import Routed from "./routes/Routed";
+import Layout from "./Layout/Layout";
 
 function App() {
   return (
     <div className="App">
-      <Routed />
+      <Layout />
     </div>
   );
 }

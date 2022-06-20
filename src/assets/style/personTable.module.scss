@@ -1,0 +1,60 @@
+$personItemBg: #def5de;
+
+.personMain {
+  background-color: $personItemBg;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  border-radius: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.personItem {
+  margin-top: 0.5rem;
+  padding: 0.3rem;
+}
+
+.personButton {
+  width: 7rem;
+  height: 3rem;
+  display: block;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+//person table responsive
+
+@media screen and (max-width: 550px) {
+  .personMain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+//tablet responsive
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  .personMain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+//mini leptop responsive
+
+@media screen and (min-width: 641px) and (max-width: 740px) {
+  .personMain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+//leptop responsive
+
+@media screen and (min-width: 741px) and (max-width: 1000px) {
+  .personMain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,59 @@
+.containerFull {
+  width: 100%;
+  background-color: rgb(38, 10, 141);
+  margin-top: 2rem;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.titleDiv {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: aqua;
+  text-align: center;
+}
+
+//footer responsive
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
+}
+
+//tablet responsive
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  .container {
+    width: 100%;
+  }
+
+  .titleDiv {
+    text-align: left;
+  }
+}
+
+//mini leptop responsive
+
+@media screen and (min-width: 641px) and (max-width: 740px) {
+  .container {
+    width: 100%;
+  }
+  .titleDiv {
+    text-align: left;
+  }
+}
+
+//leptop responsive
+
+@media screen and (min-width: 741px) and (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
+  .titleDiv {
+    text-align: left;
+  }
+}
