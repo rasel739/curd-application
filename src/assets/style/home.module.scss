@@ -1,0 +1,82 @@
+$titleColor: gray;
+$titleBg: #fff;
+$formMainBg: #06086b;
+$formButtonBg: green;
+
+.containerFull {
+  width: 100%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  background-color: $titleBg;
+  color: $titleColor;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.formMain {
+  background-color: $formMainBg;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  color: $titleColor;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.formLabel {
+  margin-bottom: 1rem;
+}
+
+.formItem {
+  padding: 1rem;
+}
+
+.formButton {
+  width: 7rem;
+  height: 3rem;
+  background-color: $formButtonBg;
+  padding: 1rem;
+  color: $titleColor;
+  border: none;
+  border-radius: 1rem;
+  margin-top: 10%;
+}
+
+.formInput {
+  width: 80%;
+  height: 3rem;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid green;
+}
+
+.formInput:focus {
+  border: 0.2rem solid rgb(196, 17, 181);
+}
+
+//mobile responsive
+
+@media screen and (max-width: 550px) {
+  .container {
+    width: 100%;
+  }
+
+  .formGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .formInput {
+    width: 100%;
+  }
+}

@@ -1,4 +1,3 @@
-import "./App.css";
 import Routed from "./routes/Routed";
 
 function App() {

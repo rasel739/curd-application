@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import homeStyle from "../assets/style/home.module.scss";
 import { postPerson } from "../redux/personSlice";
-
 import PersonData from "./PersonData";
 
 const Home = () => {
@@ -20,33 +20,47 @@ const Home = () => {
   };
 
   return (
-    <div className="container-full">
-      <div className="container">
-        <div>
+    <div className={homeStyle.containerFull}>
+      <div className={homeStyle.container}>
+        <div className={homeStyle.title}>
           <h2>Curd Operations</h2>
         </div>
-        <div>
+        <div className={homeStyle.formMain}>
           <form onSubmit={handleSubmit}>
-            <div>
-              <label>Name</label>
-              <input
-                type="text"
-                placeholder="Your Name"
-                onChange={(event) => setName(event.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label>Phone Number</label>
-              <input
-                type="text"
-                placeholder="Your Phone Number"
-                onChange={(event) => setPhone(event.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <button type="submit">Add</button>
+            <div className={homeStyle.formGrid}>
+              <div className={homeStyle.formItem}>
+                <div className={homeStyle.formLabel}>
+                  <label>Name</label>
+                </div>
+                <div>
+                  <input
+                    className={homeStyle.formInput}
+                    type="text"
+                    placeholder="Your Name"
+                    onChange={(event) => setName(event.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className={homeStyle.formItem}>
+                <div className={homeStyle.formLabel}>
+                  <label>Phone Number</label>
+                </div>
+                <div>
+                  <input
+                    className={homeStyle.formInput}
+                    type="text"
+                    placeholder="Your Phone Number"
+                    onChange={(event) => setPhone(event.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              <div className={homeStyle.formItem}>
+                <button type="submit" className={homeStyle.formButton}>
+                  Add
+                </button>
+              </div>
             </div>
           </form>
         </div>
