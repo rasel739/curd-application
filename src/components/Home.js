@@ -69,7 +69,7 @@ const Home = () => {
                     ref={phoneValue}
                     className={homeStyle.formInput}
                     type="text"
-                    placeholder="Your Phone Number"
+                    placeholder="+8801359595888"
                     onChange={(event) => setPhone(event.target.value)}
                     required
                   />
@@ -87,8 +87,8 @@ const Home = () => {
         </div>
         <div className={homeStyle.tableGrid}>
           {["Id", "Name", "Phone Number", "Update", "Delete", "Details"].map(
-            (tableHeader) => (
-              <div className={homeStyle.tableItem}>
+            (tableHeader, index) => (
+              <div className={homeStyle.tableItem} key={index}>
                 <h4>{tableHeader}</h4>
               </div>
             )

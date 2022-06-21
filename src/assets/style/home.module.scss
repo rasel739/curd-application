@@ -1,7 +1,21 @@
-$titleColor: #fff;
+//home all color
+$textColor: #fff;
 $titleBg: #fff;
 $formMainBg: #06086b;
 $formButtonBg: green;
+$inputFocus: rgb(196, 17, 181);
+$tableHeadBg: linear-gradient(7deg, #be7ef9 0%, #9b90fa 80%);
+$tableItemColor: rgb(34, 24, 24);
+
+@mixin margin-y {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+@mixin padding-y {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 
 .containerFull {
   width: 100%;
@@ -14,8 +28,7 @@ $formButtonBg: green;
 
 .imageDiv {
   text-align: center;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
+  @include margin-y;
 }
 
 .imageDiv > img {
@@ -28,7 +41,7 @@ $formButtonBg: green;
   text-align: center;
   padding: 2rem;
   border-radius: 1rem;
-  color: $titleColor;
+  color: $textColor;
 }
 
 .formGrid {
@@ -49,7 +62,7 @@ $formButtonBg: green;
   height: 3rem;
   background-color: $formButtonBg;
   padding: 1rem;
-  color: $titleColor;
+  color: $textColor;
   border: none;
   border-radius: 1rem;
   margin-top: 10%;
@@ -62,28 +75,28 @@ $formButtonBg: green;
   outline: none;
   padding: 0.5rem;
   border-radius: 1rem;
-  border: 1px solid green;
+  border: 1px solid $formButtonBg;
 }
 
 .formInput:focus {
-  border: 0.2rem solid rgb(196, 17, 181);
+  border: 0.2rem solid $inputFocus;
 }
 
 //data show table grid
 
 .tableGrid {
-  background: linear-gradient(7deg, #be7ef9 0%, #9b90fa 80%);
+  @include padding-y;
+  background: $tableHeadBg;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+
   margin-top: 3rem;
   border-radius: 1rem;
 }
 
 .tableItem {
   padding: 1rem;
-  color: rgb(34, 24, 24);
+  color: $tableItemColor;
 }
 
 //mobile responsive
