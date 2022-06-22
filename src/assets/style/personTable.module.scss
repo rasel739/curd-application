@@ -23,12 +23,30 @@ $personItemBg: #def5de;
   cursor: pointer;
 }
 
+.newItem {
+  width: 3rem;
+  height: 2rem;
+  background-color: rgb(50, 197, 62);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  right: 6rem;
+  bottom: 4rem;
+  color: rgb(245, 245, 241);
+  z-index: 2000;
+}
+
 //person table responsive
 
 @media screen and (max-width: 550px) {
   .personMain {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .newItem {
+    right: 11rem;
+    bottom: -9rem;
   }
 }
 
@@ -39,6 +57,10 @@ $personItemBg: #def5de;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .newItem {
+    right: 12rem;
+    bottom: -12rem;
+  }
 }
 
 //mini leptop responsive
@@ -48,6 +70,10 @@ $personItemBg: #def5de;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
+  .newItem {
+    right: 15rem;
+    bottom: -13rem;
+  }
 }
 
 //leptop responsive
@@ -56,5 +82,9 @@ $personItemBg: #def5de;
   .personMain {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+  .newItem {
+    right: 22rem;
+    bottom: -16rem;
   }
 }

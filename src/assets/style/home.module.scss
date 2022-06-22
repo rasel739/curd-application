@@ -99,6 +99,18 @@ $tableItemColor: rgb(34, 24, 24);
   color: $tableItemColor;
 }
 
+.tableisEmpty {
+  width: 100%;
+  height: 20rem;
+  background-color: gray;
+  border-radius: 1rem;
+}
+
+.tableisEmpty > h2 {
+  padding-top: 8rem;
+  text-align: center;
+}
+
 //mobile responsive
 
 @media screen and (max-width: 550px) {

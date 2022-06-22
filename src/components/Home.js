@@ -15,6 +15,7 @@ const Home = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [error, setError] = useState("");
+  const [newItem, setNewItem] = useState("");
 
   const bdNumberregExp = /(^(\+88)(01){1}[3456789]{1}(\d){8})$/;
 
@@ -30,10 +31,14 @@ const Home = () => {
       dispatch(postPerson(persons));
       cogoToast.success("Add Data Success");
       nameValue.current.value = "";
-      phoneValue.current.value = "";
+      phoneValue.current.value = "+880";
+      setNewItem("New");
     } else {
       setError("Only bd number is allowed with country code");
     }
+    setTimeout(() => {
+      setNewItem("");
+    }, 5000);
   };
 
   return (
@@ -69,6 +74,7 @@ const Home = () => {
                     ref={phoneValue}
                     className={homeStyle.formInput}
                     type="text"
+                    defaultValue="+880"
                     placeholder="+8801359595888"
                     onChange={(event) => setPhone(event.target.value)}
                     required
@@ -94,14 +100,25 @@ const Home = () => {
             )
           )}
         </div>
-        <div>
-          {person
-            .slice(0)
-            .reverse()
-            .map((person) => (
-              <PersonData key={person.id} person={person}></PersonData>
-            ))}
-        </div>
+        {person.length === 0 ? (
+          <div className={homeStyle.tableisEmpty}>
+            <h2>Table is Empty</h2>
+          </div>
+        ) : (
+          <div>
+            {person
+              .slice(0)
+              .reverse()
+              .map((persons, index) => (
+                <PersonData
+                  key={person.id}
+                  persons={persons}
+                  newItem={newItem}
+                  index={index}
+                ></PersonData>
+              ))}
+          </div>
+        )}
       </div>
     </div>
   );

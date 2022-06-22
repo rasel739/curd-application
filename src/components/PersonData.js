@@ -1,12 +1,14 @@
 import { BsEyeFill, BsFillTrashFill, BsPencilSquare } from "react-icons/bs";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 import personDataStyle from "../assets/style/personTable.module.scss";
 import { deletePerson } from "../redux/personSlice";
 
-const PersonData = ({ person }) => {
-  const { id, name, phone } = person;
+const PersonData = ({ persons, newItem, index }) => {
+  const { person } = useSelector((state) => state.personReducer);
+
+  const { id, name, phone } = persons;
 
   const dispatch = useDispatch();
 
@@ -58,7 +60,7 @@ const PersonData = ({ person }) => {
           className={personDataStyle.personButton}
           onClick={() => handleDelete(id)}
         >
-          <BsFillTrashFill />
+          <BsFillTrashFill style={{ color: "red" }} />
         </button>
       </div>
       <div className={personDataStyle.personItem}>
@@ -71,6 +73,13 @@ const PersonData = ({ person }) => {
             <BsEyeFill />
           </Link>
         </button>
+      </div>
+      <div>
+        {person[1 - index - 1] && newItem ? (
+          <span className={personDataStyle.newItem}>{newItem}</span>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );
