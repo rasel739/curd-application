@@ -6,8 +6,6 @@ import homeStyle from "../assets/style/home.module.scss";
 const CurdDetails = () => {
   const location = useLocation();
 
-  console.log(location);
-
   const { id, name, phone } = location.state;
 
   return (

@@ -1,9 +1,25 @@
+import { useEffect, useState } from "react";
 import Layout from "./Layout/Layout";
+import Preloader from "./preloader/Preloader";
 
 function App() {
+  const [loader, setLoader] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoader(false);
+    }, 3000);
+  }, []);
+
   return (
     <div className="App">
-      <Layout />
+      {loader ? (
+        <div>
+          <Preloader />
+        </div>
+      ) : (
+        <Layout />
+      )}
     </div>
   );
 }
