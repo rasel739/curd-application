@@ -41,7 +41,16 @@ $personItemBg: #def5de;
 @media screen and (max-width: 550px) {
   .personMain {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    height: 30rem;
+    margin-top: 3rem;
+    border-radius: 0;
+  }
+
+  .personItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
   }
 
   .newItem {
@@ -55,11 +64,16 @@ $personItemBg: #def5de;
 @media screen and (min-width: 551px) and (max-width: 640px) {
   .personMain {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    height: 30rem;
+    margin-top: 3rem;
+    border-radius: 0;
   }
-  .newItem {
-    right: 12rem;
-    bottom: -12rem;
+
+  .personItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -68,11 +82,16 @@ $personItemBg: #def5de;
 @media screen and (min-width: 641px) and (max-width: 740px) {
   .personMain {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    height: 30rem;
+    margin-top: 3rem;
+    border-radius: 0;
   }
-  .newItem {
-    right: 15rem;
-    bottom: -13rem;
+
+  .personItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -81,10 +100,15 @@ $personItemBg: #def5de;
 @media screen and (min-width: 741px) and (max-width: 1000px) {
   .personMain {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 70%;
+    height: 30rem;
+    margin-top: 3rem;
+    border-radius: 0;
   }
-  .newItem {
-    right: 22rem;
-    bottom: -16rem;
+
+  .personItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
   }
 }

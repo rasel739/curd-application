@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 import personDataStyle from "../assets/style/personTable.module.scss";
 import { deletePerson } from "../redux/personSlice";
 
-const PersonData = ({ persons, newItem, index }) => {
+const PersonData = ({ persons, newItem }) => {
   const { person } = useSelector((state) => state.personReducer);
 
   const { id, name, phone } = persons;
@@ -75,7 +75,7 @@ const PersonData = ({ persons, newItem, index }) => {
         </button>
       </div>
       <div>
-        {person[1 - index - 1] && newItem ? (
+        {person[person.length - 1] && newItem ? (
           <span className={personDataStyle.newItem}>{newItem}</span>
         ) : (
           ""

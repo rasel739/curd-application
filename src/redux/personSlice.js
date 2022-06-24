@@ -22,20 +22,13 @@ export const personSlice = createSlice({
     updatePerson: (state, action) => {
       const { id, name, phone } = action.payload;
 
-      // const updatePersonData = (state.person = state.person.filter(
-      //   (person) => person.id === id
-      // ));
-
-      // if (updatePersonData) {
-      //   updatePersonData[0].name = name;
-      //   updatePersonData[0].phone = phone;
-      // }
-
       state.person.map((person) => {
         if (person.id === id) {
           person.name = name;
           person.phone = phone;
         }
+
+        return person;
       });
     },
 

@@ -129,7 +129,36 @@ $tableItemColor: rgb(34, 24, 24);
 
   .tableGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 60%;
+    height: 30rem;
+    border-radius: 0;
+  }
+
+  .tableItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .tableData {
+    width: 40%;
+  }
+  .tableMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .tableDataShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageDiv > img {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
@@ -151,7 +180,36 @@ $tableItemColor: rgb(34, 24, 24);
 
   .tableGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 30%;
+    height: 30rem;
+    border-radius: 0;
+  }
+
+  .tableItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .tableData {
+    width: 70%;
+  }
+  .tableMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .tableDataShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .imageDiv > img {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
@@ -173,7 +231,35 @@ $tableItemColor: rgb(34, 24, 24);
 
   .tableGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 20%;
+    height: 30rem;
+    border-radius: 0;
+  }
+
+  .tableItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .tableData {
+    width: 80%;
+  }
+  .tableMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .tableDataShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imageDiv > img {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
@@ -195,6 +281,30 @@ $tableItemColor: rgb(34, 24, 24);
 
   .tableGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 20%;
+    height: 30rem;
+    border-radius: 0;
+  }
+
+  .tableItem {
+    padding-top: 1.3rem;
+    padding-bottom: 1rem;
+  }
+
+  .tableData {
+    width: 80%;
+  }
+  .tableMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+  }
+
+  .tableDataShow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

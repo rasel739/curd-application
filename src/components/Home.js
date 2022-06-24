@@ -91,34 +91,37 @@ const Home = () => {
             </div>
           </form>
         </div>
-        <div className={homeStyle.tableGrid}>
-          {["Id", "Name", "Phone Number", "Update", "Delete", "Details"].map(
-            (tableHeader, index) => (
-              <div className={homeStyle.tableItem} key={index}>
-                <h4>{tableHeader}</h4>
+        <div className={homeStyle.tableMain}>
+          <div className={homeStyle.tableGrid}>
+            {["Id", "Name", "Phone Number", "Update", "Delete", "Details"].map(
+              (tableHeader, index) => (
+                <div className={homeStyle.tableItem} key={index}>
+                  <h4>{tableHeader}</h4>
+                </div>
+              )
+            )}
+          </div>
+          <div className={homeStyle.tableData}>
+            {person.length === 0 ? (
+              <div className={homeStyle.tableisEmpty}>
+                <h2>Table is Empty</h2>
               </div>
-            )
-          )}
+            ) : (
+              <div className={homeStyle.tableDataShow}>
+                {person
+                  .slice(0)
+                  .reverse()
+                  .map((persons) => (
+                    <PersonData
+                      key={persons.id}
+                      persons={persons}
+                      newItem={newItem}
+                    ></PersonData>
+                  ))}
+              </div>
+            )}
+          </div>
         </div>
-        {person.length === 0 ? (
-          <div className={homeStyle.tableisEmpty}>
-            <h2>Table is Empty</h2>
-          </div>
-        ) : (
-          <div>
-            {person
-              .slice(0)
-              .reverse()
-              .map((persons, index) => (
-                <PersonData
-                  key={person.id}
-                  persons={persons}
-                  newItem={newItem}
-                  index={index}
-                ></PersonData>
-              ))}
-          </div>
-        )}
       </div>
     </div>
   );

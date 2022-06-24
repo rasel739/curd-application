@@ -16,8 +16,6 @@ const UpdatePerson = () => {
 
   const id = location.state.id;
 
-  console.log(location);
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
