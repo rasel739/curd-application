@@ -91,6 +91,7 @@ const Home = () => {
             </div>
           </form>
         </div>
+
         <div className={homeStyle.tableMain}>
           <div className={homeStyle.tableGrid}>
             {["Id", "Name", "Phone Number", "Update", "Delete", "Details"].map(
@@ -101,26 +102,25 @@ const Home = () => {
               )
             )}
           </div>
-          <div className={homeStyle.tableData}>
-            {person.length === 0 ? (
-              <div className={homeStyle.tableisEmpty}>
-                <h2>Table is Empty</h2>
-              </div>
-            ) : (
-              <div className={homeStyle.tableDataShow}>
-                {person
-                  .slice(0)
-                  .reverse()
-                  .map((persons) => (
-                    <PersonData
-                      key={persons.id}
-                      persons={persons}
-                      newItem={newItem}
-                    ></PersonData>
-                  ))}
-              </div>
-            )}
-          </div>
+
+          {person.length === 0 ? (
+            <div className={homeStyle.tableisEmpty}>
+              <h2>Table is Empty</h2>
+            </div>
+          ) : (
+            <div className={homeStyle.tableDataShow}>
+              {person
+                .slice(0)
+                .reverse()
+                .map((persons) => (
+                  <PersonData
+                    key={persons.id}
+                    persons={persons}
+                    newItem={newItem}
+                  ></PersonData>
+                ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
