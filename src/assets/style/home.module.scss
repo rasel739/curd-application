@@ -113,7 +113,7 @@ $tableItemColor: rgb(34, 24, 24);
 
 //mobile responsive
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 320px) {
   .container {
     width: 100%;
   }
@@ -138,12 +138,17 @@ $tableItemColor: rgb(34, 24, 24);
   .tableGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 29%;
-    width: 12.1rem;
+
+    width: 9.1rem;
   }
 
   .tableItem {
-    padding-top: 1.5rem;
+    padding-top: 0;
+  }
+
+  .tableisEmpty {
+    margin-top: 3rem;
+    height: 22.5rem;
   }
 
   .imageDiv > img {
@@ -154,7 +159,7 @@ $tableItemColor: rgb(34, 24, 24);
 
 //tablet responsive
 
-@media screen and (min-width: 551px) and (max-width: 640px) {
+@media screen and (min-width: 321px) and (max-width: 480px) {
   .container {
     width: 100%;
   }
@@ -179,12 +184,13 @@ $tableItemColor: rgb(34, 24, 24);
   .tableGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 29%;
-    width: 12.1rem;
+
+    width: 9.1rem;
   }
 
-  .tableItem {
-    padding-top: 1.5rem;
+  .tableisEmpty {
+    margin-top: 3rem;
+    height: 22.5rem;
   }
 
   .imageDiv > img {
@@ -195,7 +201,7 @@ $tableItemColor: rgb(34, 24, 24);
 
 //mini leptop responsive
 
-@media screen and (min-width: 641px) and (max-width: 740px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .container {
     width: 100%;
   }
@@ -220,12 +226,13 @@ $tableItemColor: rgb(34, 24, 24);
   .tableGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 29%;
-    width: 12.1rem;
+
+    width: 9.1rem;
   }
 
-  .tableItem {
-    padding-top: 1.5rem;
+  .tableisEmpty {
+    margin-top: 3rem;
+    height: 22.5rem;
   }
 
   .imageDiv > img {
@@ -236,7 +243,7 @@ $tableItemColor: rgb(34, 24, 24);
 
 //leptop responsive
 
-@media screen and (min-width: 741px) and (max-width: 1000px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .container {
     width: 100%;
   }
@@ -261,11 +268,47 @@ $tableItemColor: rgb(34, 24, 24);
   .tableGrid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    margin-top: 25%;
+
     width: 12.1rem;
   }
 
-  .tableItem {
-    margin: 0;
+  .tableisEmpty {
+    margin-top: 3rem;
+    height: 22.5rem;
+  }
+}
+
+@media screen and (min-width: 1025) and (max-width: 1200) {
+  .container {
+    width: 100%;
+  }
+
+  .formGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .formInput {
+    width: 100%;
+  }
+
+  .tableMain {
+    display: flex;
+  }
+  .tableDataShow {
+    display: flex;
+    overflow-x: scroll;
+  }
+
+  .tableGrid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    width: 12.1rem;
+  }
+
+  .tableisEmpty {
+    margin-top: 3rem;
+    height: 22.5rem;
   }
 }

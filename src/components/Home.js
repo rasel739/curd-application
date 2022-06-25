@@ -38,7 +38,7 @@ const Home = () => {
     }
     setTimeout(() => {
       setNewItem("");
-    }, 5000);
+    }, 5000 * 30);
   };
 
   return (
@@ -112,11 +112,12 @@ const Home = () => {
               {person
                 .slice(0)
                 .reverse()
-                .map((persons) => (
+                .map((persons, index) => (
                   <PersonData
                     key={persons.id}
                     persons={persons}
                     newItem={newItem}
+                    index={index}
                   ></PersonData>
                 ))}
             </div>

@@ -23,6 +23,10 @@ $personItemBg: #def5de;
   cursor: pointer;
 }
 
+.newItemMain {
+  position: relative;
+}
+
 .newItem {
   width: 3rem;
   height: 2rem;
@@ -30,88 +34,89 @@ $personItemBg: #def5de;
   padding: 0.5rem;
   border-radius: 1rem;
   position: absolute;
-  right: 6rem;
-  bottom: 4rem;
+  top: -3rem;
+  left: 70rem;
+  right: 0;
+  bottom: 0;
   color: rgb(245, 245, 241);
   z-index: 2000;
 }
 
 //person table responsive
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 320px) {
   .personMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    margin-top: 40%;
+    margin-top: 3rem;
     border-right: 1px solid gray;
   }
 
-  .personItem {
-    padding-top: 1.5rem;
-  }
-
   .newItem {
-    left: 8rem;
-    bottom: -11rem;
+    top: -17rem;
+    left: 4rem;
   }
 }
 
 //tablet responsive
 
-@media screen and (min-width: 551px) and (max-width: 640px) {
+@media screen and (min-width: 321px) and (max-width: 480px) {
   .personMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    margin-top: 40%;
+    margin-top: 3rem;
     border-right: 1px solid gray;
   }
 
-  .personItem {
-    padding-top: 1.5rem;
-  }
-
   .newItem {
-    left: 10rem;
-    bottom: -12rem;
+    top: -20rem;
+    left: 4rem;
   }
 }
 
 //mini leptop responsive
 
-@media screen and (min-width: 641px) and (max-width: 740px) {
+@media screen and (min-width: 481px) and (max-width: 768px) {
   .personMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    margin-top: 40%;
+    margin-top: 3rem;
     border-right: 1px solid gray;
   }
 
-  .personItem {
-    padding-top: 1.5rem;
-  }
-
   .newItem {
-    left: 10rem;
-    bottom: -18rem;
+    top: -21rem;
+    left: 4.5rem;
   }
 }
 
 //leptop responsive
 
-@media screen and (min-width: 741px) and (max-width: 1000px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
   .personMain {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    margin-top: 37%;
+    margin-top: 3rem;
     border-right: 1px solid gray;
   }
 
-  .personItem {
-    padding-top: 1.5rem;
+  .newItem {
+    top: -20rem;
+    left: 4.5rem;
+  }
+}
+
+@media screen and (min-width: 1025) and (max-width: 1200) {
+  .personMain {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+
+    border-right: 1px solid gray;
   }
 
   .newItem {
